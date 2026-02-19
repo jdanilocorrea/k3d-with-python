@@ -1,4 +1,4 @@
-```
+
 # 🚀 K3d DevOps Lab: Cluster Local Automatizado com Python
 
 Este projeto automatiza o provisionamento de um cluster **Kubernetes** local utilizando **k3d** (K3s in Docker). O objetivo é fornecer um ambiente de desenvolvimento idêntico à produção, incluindo CNI avançada, LoadBalancer de Camada 2, Ingress Controller e uma stack completa de observabilidade.
@@ -25,28 +25,7 @@ Antes de iniciar, certifique-se de ter instalado em sua máquina:
 * **k3d CLI**:
   ```bash
   curl -s [https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh](https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh) | TAG=v5.6.0 bash
-```
-
-- **kubectl**
-    
-- **Helm 3**
-    
-- **Python 3.x**
-    
-
-* * *
-
-## 🚀 Como Utilizar
-
-### 1\. Provisionamento
-
-Para subir todo o ambiente (cluster, rede, loadbalancer e monitoramento), execute o script principal:
-
-Bash
-
-```
-python setup_k3d.py
-```
+  
 
 > \[!NOTE\] O script gerencia as dependências e aguarda até que os webhooks de validação do **MetalLB** estejam prontos (`kubectl wait`) antes de aplicar as configurações de rede.
 
